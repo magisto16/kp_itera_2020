@@ -2,4 +2,4 @@
 Name : Dhiko JangJaya Putra
 
 # This is My Work
-Make Website KP for Institut Teknologi Sumatera
+Make Template Wesbsite KP for Institut Teknologi Sumatera
