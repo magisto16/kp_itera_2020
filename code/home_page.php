@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="../css/home_page.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
     <div class="header">
-        <h1>Chania</h1>
+        <h1>Institut Teknologi Sumatera</h1>
     </div>
 
     <div class="row">
         <div class="col-3 col-s-3 menu">
             <ul>
-                <li>The Flight</li>
-                <li>The City</li>
-                <li>The Island</li>
-                <li>The Food</li>
+                <li>Beranda</li>
+                <li>Daftar</li>
+                <li>Referensi</li>
+                <li>Unduh Form</li>
+                <li>Upload</li>
+                <li>Pengajuan Seminar</li>
+                <li>Log Sheet</li>
             </ul>
         </div>
 
@@ -39,7 +43,7 @@
 
 
             <div class="col-12 col-s-12 content_dua">
-                <div class="col-3 col-s-3 info_kp">
+                <div class="col-12 col-s-12 info_kp">
                     <p>Info Kerja Praktik</p>
                     <h2>Ini Info Tentang Kerja Praktik</h2>
                 </div>
@@ -50,7 +54,7 @@
     </div>
 
     <div class="footer">
-        <p>Resize the browser window to see how the content respond to the resizing.</p>
+        <p><i class="fa fa-copyright" aria-hidden="true"></i> Copyright</p>
     </div>
 
 </body>
