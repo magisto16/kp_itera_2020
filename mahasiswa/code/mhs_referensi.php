@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="../css/mhs_daftar.css" type="text/css">
+    <link rel="stylesheet" href="../css/mhs_referensi.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -43,22 +43,32 @@
 
         <div class="col-9 col-s-9 content">
 
-            <form class="col-12 col-s-12 form" action="#">
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                </div>
-                <div class="form-group">
-                    <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-                </div>
-                <div class="form-group form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="remember"> Remember me
-                    </label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            <table class=" col-12 col-s-12 table table-hover">
+                <thead>
+                    <tr>
+                        <th>Instansi</th>
+                        <th>Direktur</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PT.Indodrink</td>
+                        <td>Doe</td>
+                        <td>indodrink@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Indroapril</td>
+                        <td>Moe</td>
+                        <td>indoapril@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Warungpedia</td>
+                        <td>Dooley</td>
+                        <td>warungpedia@example.com</td>
+                    </tr>
+                </tbody>
+            </table>
 
         </div>
 
