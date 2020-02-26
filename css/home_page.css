@@ -128,18 +128,25 @@ body {
 }
 
 .header {
-    background-color: rgb(175, 108, 21);
-    color: #ffffff;
-    padding: 15px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    color: black;
+    padding: 15px;
 }
 
-.header .head-content {
-    display: flex;
-    align-items: center;
+.navbar-custom {
+    background-color: rgb(175, 108, 21);
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+}
+
+.nav.navbar-nav.navbar-right li a:hover {
+    background-color: rgb(141, 88, 18);
+}
+
+.nav.navbar-nav.navbar-right li a:active {
+    background-color: rgb(175, 108, 21);
 }
 
 .menu ul {
