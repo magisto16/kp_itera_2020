@@ -145,8 +145,9 @@ body {
     background-color: rgb(141, 88, 18);
 }
 
-.nav.navbar-nav.navbar-right li a:active {
+.nav.navbar-nav.navbar-right li a:focus {
     background-color: rgb(175, 108, 21);
+    font-weight: bold;
 }
 
 .menu ul {
@@ -165,7 +166,6 @@ body {
 
 .menu li:hover {
     background-color: rgb(32, 30, 30);
-    ;
 }
 
 .content_satu {
