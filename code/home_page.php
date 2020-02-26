@@ -10,8 +10,13 @@
 
 <body>
 
-    <div class="header">
-        <h1>Institut Teknologi Sumatera</h1>
+    <div class=" header">
+        <h1 class="col-9 col-s-12">Institut Teknologi Sumatera</h1>
+
+        <div class="col-3 col-s-12 head-content">
+            <p>Admin</p>
+            <a href="#">Logout</a>
+        </div>
     </div>
 
     <div class="row">
@@ -32,12 +37,17 @@
             <div class="col-12 col-s-12 content_satu">
                 <div class="col-3 col-s-3 nilai_akhir">
                     <p>Nilai Akhir</p>
-                    <h2>C</h2>
+                    <h2>A</h2>
                 </div>
 
                 <div class="col-3 col-s-3 semester">
                     <p>Semester</p>
                     <h2>7</h2>
+                </div>
+
+                <div class="col-3 col-s-3 catatan">
+                    <p>Catatan Dosen Pembimbing</p>
+                    <a href="#">Lihat</a>
                 </div>
             </div>
 
@@ -49,6 +59,12 @@
                 </div>
             </div>
 
+            <div class="col-12 col-s-12 content_dua">
+                <div class="col-12 col-s-12 info_kp">
+                    <p>Info Fotonya</p>
+                    <h2>Ini Info Tentang Foto-Fotonya</h2>
+                </div>
+            </div>
         </div>
 
     </div>
