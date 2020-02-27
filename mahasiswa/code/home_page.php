@@ -31,30 +31,25 @@
     <div class="row">
         <div class="col-3 col-s-3 menu">
             <ul>
-                <li>Beranda</li>
-                <li>Daftar</li>
-                <li>Referensi</li>
-                <li>Unduh Form</li>
-                <li>Upload</li>
-                <li>Pengajuan Seminar</li>
-                <li>Log Sheet</li>
+                <li><a href="home_page.php">Beranda</a></li>
+                <li><a href="mhs_daftar.php">Daftar</a></li>
+                <li><a href="mhs_referensi.php">Referensi</a></li>
+                <li><a href="mhs_unduh.php">Unduh Form</a></li>
+                <li><a href="mhs_upload.php">Upload</a></li>
+                <li><a href="mhs_pengajuan.php">Pengajuan Seminar</a></li>
+                <li><a href="mhs_logsheet.php">Log Sheet</a></li>
             </ul>
         </div>
 
         <div class="col-9 col-s-9 content">
 
             <div class="col-12 col-s-12 content_satu">
-                <div class="col-3 col-s-3 nilai_akhir">
-                    <p>Nilai Akhir</p>
-                    <h2>A</h2>
-                </div>
-
-                <div class="col-3 col-s-3 semester">
+                <div class="col-3 col-s-12 semester">
                     <p>Semester</p>
                     <h2>7</h2>
                 </div>
 
-                <div class="col-3 col-s-3 catatan">
+                <div class="col-3 col-s-12 catatan">
                     <p>Catatan Dosen Pembimbing</p>
                     <a href="#">Lihat</a>
                 </div>
