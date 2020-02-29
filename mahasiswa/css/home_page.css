@@ -121,6 +121,7 @@ img {
 
 html {
     font-family: "Lucida Sans", sans-serif;
+    padding: 15px;
 }
 
 body {
@@ -200,7 +201,7 @@ body {
 
 .semester {
     background-color: #33b5e5;
-    padding: 15px;
+    /* padding: 15px; */
     color: #ffffff;
     text-align: center;
     font-size: 14px;

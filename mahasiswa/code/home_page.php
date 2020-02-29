@@ -29,7 +29,7 @@
     </div>
 
     <div class="row">
-        <div class="col-3 col-s-3 menu">
+        <div class="col-3 col-s-12 menu">
             <ul>
                 <li><a href="home_page.php">Beranda</a></li>
                 <li><a href="mhs_daftar.php">Daftar</a></li>
@@ -40,9 +40,9 @@
             </ul>
         </div>
 
-        <div class="col-9 col-s-9 content">
+        <div class="col-9 col-s-12 content">
 
-            <div class="col-12 col-s-12 content_satu">
+            <div class="col-9 col-12 content_satu">
                 <div class="col-3 col-s-12 semester">
                     <p>Semester</p>
                     <h2>7</h2>
@@ -62,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-s-12 content_dua">
+            <div class="col-12 col-s-12 content_tiga">
                 <div class="col-12 col-s-12 info_kp">
                     <p>Info Fotonya</p>
                     <h2>Ini Info Tentang Foto-Fotonya</h2>
