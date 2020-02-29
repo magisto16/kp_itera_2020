@@ -31,13 +31,12 @@
     <div class="row">
         <div class="col-3 col-s-3 menu">
             <ul>
-                <li>Beranda</li>
-                <li>Daftar</li>
-                <li>Referensi</li>
-                <li>Unduh Form</li>
-                <li>Upload</li>
-                <li>Pengajuan Seminar</li>
-                <li>Log Sheet</li>
+                <li><a href="home_page.php">Beranda</a></li>
+                <li><a href="mhs_daftar.php">Daftar</a></li>
+                <li><a href="mhs_referensi.php">Referensi</a></li>
+                <li><a href="mhs_unduh.php">Unduh Form</a></li>
+                <li><a href="mhs_upload.php">Upload</a></li>
+                <li><a href="mhs_pengajuan.php">Pengajuan Seminar</a></li>
             </ul>
         </div>
 

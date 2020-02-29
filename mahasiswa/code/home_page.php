@@ -37,7 +37,6 @@
                 <li><a href="mhs_unduh.php">Unduh Form</a></li>
                 <li><a href="mhs_upload.php">Upload</a></li>
                 <li><a href="mhs_pengajuan.php">Pengajuan Seminar</a></li>
-                <li><a href="mhs_logsheet.php">Log Sheet</a></li>
             </ul>
         </div>
 
