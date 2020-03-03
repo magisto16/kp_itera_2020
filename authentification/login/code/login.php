@@ -18,8 +18,9 @@
 
     <div class="row">
         <div class="col-6 col-s-12 content">
+            <h3>LOGIN</h3>
             <form class="col-12 col-s-12 form" action="#">
-                <h3>LOGIN</h3>
+
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
