@@ -46,7 +46,7 @@
                 <thead>
                     <tr>
                         <th>Mahasiswa</th>
-                        <th>Lainnay</th>
+                        <th>Lainnya</th>
                     </tr>
                 </thead>
                 <tbody>
