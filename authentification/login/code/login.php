@@ -12,13 +12,14 @@
 
 <body>
 
-    <div class=" header">
-        <h1>Institut Teknologi Sumatera</h1>
-    </div>
-
     <div class="row">
-        <div class="col-6 col-s-12 content">
-            <h3>LOGIN</h3>
+
+        <div class="col-3 col-s-12 head">
+            <h1>Institut Teknologi Sumatera</h1>
+        </div>
+
+        <div class="col-3 col-s-12 content">
+            <h3 style="text-align: center">LOGIN</h3>
             <form class="col-12 col-s-12 form" action="#">
 
                 <div class="form-group">
@@ -39,10 +40,6 @@
 
         </div>
 
-    </div>
-
-    <div class="footer">
-        <p><i class="fa fa-copyright" aria-hidden="true"></i> Copyright</p>
     </div>
 
 </body>
