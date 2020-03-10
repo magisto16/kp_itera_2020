@@ -125,7 +125,13 @@ html {
 }
 
 body {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    /* background-image: url(../img/login.jpg); */
+    -webkit-background-size: cover;
+    -moz-background-size: 100% 100%;
+    -o-background-size: cover;
+    background-size: cover;
+    background-blend-mode: darken;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
 }
 
 /* CLASS ROW */
@@ -135,6 +141,10 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.content {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .head {
