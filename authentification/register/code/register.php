@@ -23,12 +23,12 @@
             <form class="col-12 col-s-12 form" action="#">
 
                 <div class="form-group">
-                    <label for="email">Nama:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter Name" name="email">
+                    <label for="name">Nama:</label>
+                    <input type="name" class="form-control" id="name" placeholder="Enter Name" name="name">
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Email:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter Email" name="pswd">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
                 </div>
                 <div class="form-group">
                     <label for="pwd">Password:</label>
@@ -38,7 +38,7 @@
                     <label for="pwd">
                         <Re-Type></Re-Type>Re-Type Password
                     </label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter Re-Type Password" name="pswd">
+                    <input type="password" class="form-control" id="re-pwd" placeholder="Enter Re-Type Password" name="re-pswd">
                 </div>
                 <div class="form-group form-check">
                     <label class="form-check-label">
