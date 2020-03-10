@@ -24,21 +24,21 @@
 
                 <div class="form-group">
                     <label for="name">Nama:</label>
-                    <input type="name" class="form-control" id="name" placeholder="Enter Name" name="name">
+                    <input type="name" class="form-control" id="name" placeholder="Enter Name" name="name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
                 </div>
                 <div class="form-group">
                     <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="pswd">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="pswd" required>
                 </div>
                 <div class="form-group">
                     <label for="pwd">
                         <Re-Type></Re-Type>Re-Type Password
                     </label>
-                    <input type="password" class="form-control" id="re-pwd" placeholder="Enter Re-Type Password" name="re-pswd">
+                    <input type="password" class="form-control" id="re-pwd" placeholder="Enter Re-Type Password" name="re-pswd" required>
                 </div>
                 <div class="form-group form-check">
                     <label class="form-check-label">

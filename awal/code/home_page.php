@@ -18,26 +18,50 @@
     </div>
 
     <div class="row">
-        <div class="col-6 col-s-12 menu">
+        <form class="col-6 col-s-12 form" action="../../authentification/login/code/login.php">
             <h4>Website Resmi Kerja Praktik Teknik Informatika
                 Institut Teknologi Sumatera</h4>
-            <button type="button"><a href="../../authentification/login/code/login.php">Login</a></button>
-            <button type="button"><a href="../../authentification/register/code/register.php">Register</a></button>
-        </div>
+            <button class="btn btn-primary" type="submit">Login</a></button>
+        </form>
 
         <div class="col-6 col-s-12 content">
-
             <div class="col-9 col-12 content_satu">
-                <div class="col-3 col-s-12 semester">
-                    <p>Foto-Foto Kerja Praktik</p>
+                <div class="col-9 col-s-12 foto_alur_kp">
+                    <img src="../img/alur_kp.png" alt="Foto Alur KP">
+                    <p>Info Alur Kerja Praktik</p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="info_kp">
-        <p>Info Kerja Praktik</p>
-        <h2>Ini Info Tentang Kerja Praktik</h2>
+        <h4>Info Tempat Kerja Praktik</h4>
+        <table class=" table table-hover">
+            <thead>
+                <tr>
+                    <th>Instansi</th>
+                    <th>Direktur</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PT.Indodrink</td>
+                    <td>Doe</td>
+                    <td>indodrink@example.com</td>
+                </tr>
+                <tr>
+                    <td>Indroapril</td>
+                    <td>Moe</td>
+                    <td>indoapril@example.com</td>
+                </tr>
+                <tr>
+                    <td>Warungpedia</td>
+                    <td>Dooley</td>
+                    <td>warungpedia@example.com</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <div class="footer">
