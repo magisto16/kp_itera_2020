@@ -14,8 +14,8 @@
 
     <div class="row">
 
-        <div class="col-3 col-s-12 head">
-            <h1>Institut Teknologi Sumatera</h1>
+        <div class="col-5 col-s-12 head">
+            <h1>Kerja Praktik Teknik Informatika Institut Teknologi Sumatera</h1>
         </div>
 
         <div class="col-3 col-s-12 content">

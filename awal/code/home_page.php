@@ -30,6 +30,7 @@
                     <img src="../img/alur_kp.png" alt="Foto Alur KP">
                     <p>Info Alur Kerja Praktik</p>
                 </div>
+                <a href="#">Unduh Surat Persetujuan</a>
             </div>
         </div>
     </div>

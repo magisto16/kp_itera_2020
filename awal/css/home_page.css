@@ -158,6 +158,11 @@ body {
     text-align: center;
 }
 
+.content a {
+    padding: 15px;
+
+}
+
 /* CLASS ROW */
 
 /* ------------------------- */
