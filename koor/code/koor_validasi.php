@@ -1,3 +1,8 @@
+<?php
+$connect = mysqli_connect("localhost", "root", "", "kp_if_itera");
+$query = "SELECT * FROM mahasiswa";
+$result = mysqli_query($connect, $query);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -6,9 +11,10 @@
     <title>Home</title>
     <link rel="stylesheet" href="../css/koor_validasi.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -50,24 +56,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Doe</td>
-                        <td><a href="#">Validasi</a></td>
-                        <td><a href="#">Assign</a></td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
-                    <tr>
-                        <td>Moe</td>
-                        <td><a href="#">Validasi</a></td>
-                        <td><a href="#">Assign</a></td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
-                    <tr>
-                        <td>Dooley</td>
-                        <td><a href="#">Validasi</a></td>
-                        <td><a href="#">Assign</a></td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
+                    <?php
+                    while ($row = mysqli_fetch_array($result)) {
+                    ?>
+                        <tr>
+                            <td><?php echo $row["Nama"]; ?></td>
+                            <td><a href="#">Validasi</a></td>
+                            <td><a href="#">Assign</a></td>
+                            <td><input type="button" name="view" value="Lihat" id="<?php echo $row["Nama"]; ?>" class="btn btn-info btn-xs view_data" /></td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
@@ -81,3 +81,37 @@
 </body>
 
 </html>
+
+<div id="dataModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Dosen Pembimbing</h4>
+            </div>
+            <div class="modal-body" id="employee_detail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('.view_data').click(function() {
+            var employee_id = $(this).attr("id");
+            $.ajax({
+                url: "koor_validasi_lihat.php",
+                method: "post",
+                data: {
+                    employee_id: employee_id
+                },
+                success: function(data) {
+                    $('#employee_detail').html(data);
+                    $('#dataModal').modal("show");
+                }
+            });
+        });
+    });
+</script>
