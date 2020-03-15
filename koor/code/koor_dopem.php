@@ -1,14 +1,19 @@
+<?php
+$connect = mysqli_connect("localhost", "root", "", "kp_if_itera");
+$query = "SELECT * FROM dosen";
+$result = mysqli_query($connect, $query);
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Dosen Pembimbing</title>
     <link rel="stylesheet" href="../css/koor_dopem.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -43,25 +48,20 @@
         <div class="col-9 col-s-12 content">
 
             <table class=" col-12 col-s-12 table table-hover">
-                <thead>
+                <tr>
+                    <th width="70%">Nama Dosen Pembimbing</th>
+                    <th width="30%">Lihat</th>
+                </tr>
+                <?php
+                while ($row = mysqli_fetch_array($result)) {
+                ?>
                     <tr>
-                        <th colspan="2">Dosen Pembimbing</th>
+                        <td><?php echo $row["Nama"]; ?></td>
+                        <td><input type="button" name="view" value="Lihat" id="<?php echo $row["Nama"]; ?>" class="btn btn-info btn-xs view_data" /></td>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Doe</td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
-                    <tr>
-                        <td>Doe</td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
-                    <tr>
-                        <td>Doe</td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
-                </tbody>
+                <?php
+                }
+                ?>
             </table>
         </div>
 
@@ -74,3 +74,36 @@
 </body>
 
 </html>
+<div id="dataModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Dosen Pembimbing</h4>
+            </div>
+            <div class="modal-body" id="employee_detail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('.view_data').click(function() {
+            var employee_id = $(this).attr("id");
+            $.ajax({
+                url: "koor_dopem2.php",
+                method: "post",
+                data: {
+                    employee_id: employee_id
+                },
+                success: function(data) {
+                    $('#employee_detail').html(data);
+                    $('#dataModal').modal("show");
+                }
+            });
+        });
+    });
+</script>
