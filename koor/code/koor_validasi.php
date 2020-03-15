@@ -62,7 +62,7 @@ $result = mysqli_query($connect, $query);
                         <tr>
                             <td><?php echo $row["Nama"]; ?></td>
                             <td><input type="button" name="view" value="Validasi" id="<?php echo $row["Nama"]; ?>" class="btn btn-info btn-xs view_data_validasi" /></td>
-                            <td><a href="#">Assign</a></td>
+                            <td><input type="button" name="view" value="Assign" id="<?php echo $row["Nama"]; ?>" class="btn btn-info btn-xs view_data_assign" /></td>
                             <td><input type="button" name="view" value="Lihat" id="<?php echo $row["Nama"]; ?>" class="btn btn-info btn-xs view_data_lihat" /></td>
                         </tr>
                     <?php
@@ -121,6 +121,23 @@ $result = mysqli_query($connect, $query);
             var employee_id = $(this).attr("id");
             $.ajax({
                 url: "koor_validasi_validasi.php",
+                method: "post",
+                data: {
+                    employee_id: employee_id
+                },
+                success: function(data) {
+                    $('#employee_detail').html(data);
+                    $('#dataModal').modal("show");
+                }
+            });
+        });
+    });
+
+    $(document).ready(function() {
+        $('.view_data_assign').click(function() {
+            var employee_id = $(this).attr("id");
+            $.ajax({
+                url: "koor_validasi_assign.php",
                 method: "post",
                 data: {
                     employee_id: employee_id
