@@ -94,7 +94,7 @@ $result = mysqli_query($connect, $query);
         $('.view_data').click(function() {
             var employee_id = $(this).attr("id");
             $.ajax({
-                url: "koor_dopem2.php",
+                url: "koor_dopem_lihat.php",
                 method: "post",
                 data: {
                     employee_id: employee_id
