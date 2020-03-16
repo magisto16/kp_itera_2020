@@ -49,8 +49,8 @@
                 </div>
 
                 <div class="col-3 col-s-12 catatan">
-                    <p>Catatan Dosen Pembimbing</p>
-                    <a href="#">Lihat</a>
+                    <p>Status Kerja Praktik</p>
+                    <h2>Aktif</h2>
                 </div>
             </div>
 
@@ -80,13 +80,15 @@
 
 <div class="chat-popup" id="myForm">
     <form action="#" class="form-container">
-        <h1>Chat</h1>
+        <div class="form-group">
+            <h1>Chat</h1>
 
-        <label for="msg"><b>Message</b></label>
-        <textarea placeholder="Type message.." name="msg" required></textarea>
+            <label for="msg"><b>Message</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
 
-        <button type="submit" class="btn">Send</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            <button type="submit" class="btn btn-success">Send</button>
+            <button type="button" class="btn btn-danger" onclick="closeForm()">Close</button>
+        </div>
     </form>
 </div>
 
