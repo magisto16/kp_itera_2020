@@ -56,22 +56,20 @@
 
 
             <div class="col-12 col-s-12 content_dua">
-                <div class="col-12 col-s-12 info_kp">
-                    <p>Info Kerja Praktik</p>
-                    <h2>Ini Info Tentang Kerja Praktik</h2>
-                </div>
-            </div>
+                <div class="col-12 col-s-12 commentbox">
+                    <h4>Chat Message</h4>
 
-            <div class="col-12 col-s-12 content_tiga">
-                <div class="col-12 col-s-12 info_kp">
-                    <p>Info Fotonya</p>
-                    <h2>Ini Info Tentang Foto-Fotonya</h2>
+                    <p>Hey Jackie! How have you been?</p>
+                    <p>What a surprise. I haven’t seen you in a long time. How have you been?</p>
+                    <p>I’m doing very well. How about you?</p>
+                    <p>Well, I finally have some free time. I’m busy juggling between my full time job and
+                        freelance projects. But now since it’s done, I can relax for a while.</p>
                 </div>
+
+                <button class="open-button" onclick="openForm()">Chat</button>
             </div>
         </div>
-
     </div>
-
     <div class="footer">
         <p><i class="fa fa-copyright" aria-hidden="true"></i> Copyright</p>
     </div>
@@ -79,3 +77,25 @@
 </body>
 
 </html>
+
+<div class="chat-popup" id="myForm">
+    <form action="#" class="form-container">
+        <h1>Chat</h1>
+
+        <label for="msg"><b>Message</b></label>
+        <textarea placeholder="Type message.." name="msg" required></textarea>
+
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+</div>
+
+<script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+</script>
