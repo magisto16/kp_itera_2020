@@ -1,3 +1,8 @@
+<?php
+$connect = mysqli_connect("localhost", "root", "", "kp_if_itera");
+$query = "SELECT * FROM mahasiswa";
+$result = mysqli_query($connect, $query);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -45,22 +50,20 @@
                 <thead>
                     <tr>
                         <th>Mahasiswa</th>
-                        <th>Lainnya</th>
+                        <th colspan="3">Lainnya</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Doe</td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
-                    <tr>
-                        <td>Doe</td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
-                    <tr>
-                        <td>Doe</td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
+                    <?php
+                    while ($row = mysqli_fetch_array($result)) {
+                    ?>
+                        <tr>
+                            <td><?php echo $row["Nama"]; ?></td>
+                            <td><input type="button" name="view" value="Lihat" id="<?php echo $row["Nama"]; ?>" class="btn btn-info btn-xs view_data_lihat" /></td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
@@ -74,3 +77,37 @@
 </body>
 
 </html>
+
+<div id="dataModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"> Data Mahasiswa</h4>
+            </div>
+            <div class="modal-body" id="employee_detail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('.view_data_lihat').click(function() {
+            var employee_id = $(this).attr("id");
+            $.ajax({
+                url: "dopem_mhs_lihat.php",
+                method: "post",
+                data: {
+                    employee_id: employee_id
+                },
+                success: function(data) {
+                    $('#employee_detail').html(data);
+                    $('#dataModal').modal("show");
+                }
+            });
+        });
+    });
+</script>
