@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
     <div class="row">
 
-        <div class="col-5 col-s-12 head">
+        <div class="col-6 col-s-12 head">
             <h1>Kerja Praktik Teknik Informatika Institut Teknologi Sumatera</h1>
         </div>
 
         <div class="col-3 col-s-12 content">
+
             <h3 style="text-align: center">LOGIN</h3>
             <form class="col-12 col-s-12 form" action="#">
 
@@ -36,10 +37,10 @@
                     </label>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="submit" class="btn btn-success">Login</button>
                 <br>
                 <br>
-                <a href="../../register/code/register.php">Don't have account yet? <b>Sign Up</b></a>
+                <a href="../../register/code/register.php">Belum Memiliki Akun? <b>Daftar!</b></a>
             </form>
 
         </div>

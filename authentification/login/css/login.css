@@ -125,13 +125,11 @@ html {
 }
 
 body {
-    /* background-image: url(../img/login.jpg); */
+    background-image: url(../img/login.jpg);
     -webkit-background-size: cover;
     -moz-background-size: 100% 100%;
     -o-background-size: cover;
     background-size: cover;
-    background-blend-mode: darken;
-    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
 }
 
 /* CLASS ROW */
@@ -143,12 +141,16 @@ body {
     flex-wrap: wrap;
 }
 
+.head {
+    text-align: center;
+}
+
 .content {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.head {
-    text-align: center;
+.form a {
+    color: rgb(6, 161, 6);
 }
 
 /* CLASS ROW */
