@@ -3,6 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
     <link rel="stylesheet" href="../css/login.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,8 +15,8 @@
 
     <div class="row">
 
-        <div class="col-6 col-s-12 head">
-            <h1>Kerja Praktik Teknik Informatika Institut Teknologi Sumatera</h1>
+        <div class="col-5 col-s-12 head">
+            <h2>Kerja Praktik Teknik Informatika Institut Teknologi Sumatera</h2>
         </div>
 
         <div class="col-3 col-s-12 content">
