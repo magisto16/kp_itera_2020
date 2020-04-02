@@ -1,3 +1,8 @@
+<?php
+$connect = mysqli_connect("localhost", "root", "", "kp_if_itera");
+$query = "SELECT * FROM mahasiswa";
+$result = mysqli_query($connect, $query);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -39,35 +44,25 @@
             </ul>
         </div>
 
-        <div class="col-9 col-s-12 content">
+        <div class="col-9 col-s-12 content" id="content1">
 
             <table class=" col-12 col-s-12 table table-hover">
-                <thead>
+                <tr>
+                    <th width="70%">Judul Laporan</th>
+                    <th width="30%">Lihat</th>
+                </tr>
+                <?php
+                while ($row = mysqli_fetch_array($result)) {
+                ?>
                     <tr>
-                        <th>Mahasiswa</th>
-                        <th colspan="2">Lainnya</th>
+                        <td><?php echo $row["laporan"]; ?></td>
+                        <td><input type="button" name="view" value="Lihat" id="<?php echo $row["laporan"]; ?>" class="btn btn-info btn-xs view_data" /></td>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Doe</td>
-                        <td><a href="#">Lihat</a></td>
-                        <td><a href="#">Catatan</a></td>
-                    </tr>
-                    <tr>
-                        <td>Doe</td>
-                        <td><a href="#">Lihat</a></td>
-                        <td><a href="#">Catatan</a></td>
-                    </tr>
-                    <tr>
-                        <td>Doe</td>
-                        <td><a href="#">Lihat</a></td>
-                        <td><a href="#">Catatan</a></td>
-                    </tr>
-                </tbody>
+                <?php
+                }
+                ?>
             </table>
         </div>
-
     </div>
 
     <div class="footer">
@@ -77,3 +72,16 @@
 </body>
 
 </html>
+
+<script>
+    $('.view_data').click(function() {
+        var laporan_id = $(this).attr("id");
+
+        $.post('dopem_laporan_lihat.php', {
+                postid: laporan_id
+            },
+            function(data) {
+                $('#content1').html(data);
+            });
+    });
+</script>
