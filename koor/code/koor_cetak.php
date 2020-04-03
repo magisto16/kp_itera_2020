@@ -1,3 +1,8 @@
+<?php
+$connect = mysqli_connect("localhost", "root", "", "kp_if_itera");
+$query = "SELECT * FROM mahasiswa";
+$result = mysqli_query($connect, $query);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -43,27 +48,28 @@
         <div class="col-9 col-s-12 content">
 
             <table class=" col-12 col-s-12 table table-hover">
-                <thead>
+                <tr>
+                    <th width="30%">Nama</th>
+                    <th width="30%">Judul Seminar</th>
+                    <th width="20%">Nilai</th>
+                    <th width="20%">Lainnya</th>
+                </tr>
+                <?php
+                while ($row = mysqli_fetch_array($result)) {
+                ?>
                     <tr>
-                        <th>Mahasiswa</th>
-                        <th>Lainnya</th>
+                        <td><?php echo $row["Nama"]; ?></td>
+                        <td><?php echo $row["seminar"]; ?></td>
+                        <td><?php echo $row["nilai"]; ?></td>
+                        <td><input type="button" name="view" value="Lihat" id="<?php echo $row["Nama"]; ?>" class="btn btn-info btn-xs view_data_lihat" /></td>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Doe</td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
-                    <tr>
-                        <td>Moe</td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
-                    <tr>
-                        <td>Dooley</td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
-                </tbody>
+                <?php
+                }
+                ?>
             </table>
+
+            <button type="submit" class="btn btn-primary" data-dismiss="modal">Cetak</button>
+
         </div>
 
     </div>
@@ -75,3 +81,36 @@
 </body>
 
 </html>
+<div id="dataModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"> Data Mahasiswa</h4>
+            </div>
+            <div class="modal-body" id="employee_detail">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('.view_data_lihat').click(function() {
+            var employee_id = $(this).attr("id");
+            $.ajax({
+                url: "koor_cetak_lihat.php",
+                method: "post",
+                data: {
+                    employee_id: employee_id
+                },
+                success: function(data) {
+                    $('#employee_detail').html(data);
+                    $('#dataModal').modal("show");
+                }
+            });
+        });
+    });
+</script>

@@ -61,7 +61,7 @@ $result = mysqli_query($connect, $query);
                         <td><?php echo $row["Nama"]; ?></td>
                         <td><?php echo $row["laporan"]; ?></td>
                         <td><?php echo $row["seminar"]; ?></td>
-                        <td><input type="button" name="view" value="Lihat" id="<?php echo $row["laporan"]; ?>" class="btn btn-info btn-xs view_data" /></td>
+                        <td><input type="button" name="view" value="Lihat" id="<?php echo $row["Nama"]; ?>" class="btn btn-info btn-xs view_data" /></td>
                     </tr>
                 <?php
                 }
