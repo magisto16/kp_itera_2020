@@ -1,3 +1,8 @@
+<?php
+$connect = mysqli_connect("localhost", "root", "", "kp_if_itera");
+$query = "SELECT * FROM mahasiswa";
+$result = mysqli_query($connect, $query);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -40,33 +45,27 @@
             </ul>
         </div>
 
-        <div class="col-9 col-s-12 content">
+        <div class="col-9 col-s-12 content" id="content1">
 
             <table class=" col-12 col-s-12 table table-hover">
-                <thead>
+                <tr>
+                    <th width="30%">Nama</th>
+                    <th width="30%">Judul Laporan</th>
+                    <th width="30%">Jadwal Seminar</th>
+                    <th width="10%">Lihat</th>
+                </tr>
+                <?php
+                while ($row = mysqli_fetch_array($result)) {
+                ?>
                     <tr>
-                        <th>Judul Laporan</th>
-                        <th>Jadwal Seminar</th>
-                        <th>Lainnya</th>
+                        <td><?php echo $row["Nama"]; ?></td>
+                        <td><?php echo $row["laporan"]; ?></td>
+                        <td><?php echo $row["seminar"]; ?></td>
+                        <td><input type="button" name="view" value="Lihat" id="<?php echo $row["laporan"]; ?>" class="btn btn-info btn-xs view_data" /></td>
                     </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Aplikasi Ajaib</td>
-                        <td>Doe</td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
-                    <tr>
-                        <td>Sistem Keberuntungan</td>
-                        <td>Moe</td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
-                    <tr>
-                        <td>Aplikasi Aneh</td>
-                        <td>Dooley</td>
-                        <td><a href="#">Lihat</a></td>
-                    </tr>
-                </tbody>
+                <?php
+                }
+                ?>
             </table>
         </div>
 
@@ -79,3 +78,16 @@
 </body>
 
 </html>
+
+<script>
+    $('.view_data').click(function() {
+        var laporan_id = $(this).attr("id");
+
+        $.post('koor_laporan_lihat.php', {
+                postid: laporan_id
+            },
+            function(data) {
+                $('#content1').html(data);
+            });
+    });
+</script>
