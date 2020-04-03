@@ -47,24 +47,20 @@ $result = mysqli_query($connect, $query);
         <div class="col-9 col-s-12 content">
 
             <table class=" col-12 col-s-12 table table-hover">
-                <thead>
+                <tr>
+                    <th width="70%">Mahasiswa</th>
+                    <th width="30%">Lainnya</th>
+                </tr>
+                <?php
+                while ($row = mysqli_fetch_array($result)) {
+                ?>
                     <tr>
-                        <th>Mahasiswa</th>
-                        <th colspan="3">Lainnya</th>
+                        <td><?php echo $row["Nama"]; ?></td>
+                        <td><input type="button" name="view" value="Lihat" id="<?php echo $row["Nama"]; ?>" class="btn btn-info btn-xs view_data_lihat" /></td>
                     </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    while ($row = mysqli_fetch_array($result)) {
-                    ?>
-                        <tr>
-                            <td><?php echo $row["Nama"]; ?></td>
-                            <td><input type="button" name="view" value="Lihat" id="<?php echo $row["Nama"]; ?>" class="btn btn-info btn-xs view_data_lihat" /></td>
-                        </tr>
-                    <?php
-                    }
-                    ?>
-                </tbody>
+                <?php
+                }
+                ?>
             </table>
         </div>
 
