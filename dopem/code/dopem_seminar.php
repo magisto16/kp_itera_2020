@@ -49,15 +49,15 @@ $result = mysqli_query($connect, $query);
             <table class=" col-12 col-s-12 table table-hover">
                 <tr>
                     <th width="40%">Nama</th>
-                    <th width="30%">Judul Laporan</th>
-                    <th width="30%">Lihat</th>
+                    <th width="40%">Jadwal Seminar</th>
+                    <th width="20%">Lihat</th>
                 </tr>
                 <?php
                 while ($row = mysqli_fetch_array($result)) {
                 ?>
                     <tr>
                         <td><?php echo $row["Nama"]; ?></td>
-                        <td><?php echo $row["laporan"]; ?></td>
+                        <td><?php echo $row["seminar"]; ?></td>
                         <td><input type="button" name="view" value="Lihat" id="<?php echo $row["Nama"]; ?>" class="btn btn-info btn-xs view_data" /></td>
                     </tr>
                 <?php
