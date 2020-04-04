@@ -1,3 +1,8 @@
+<?php
+$connect = mysqli_connect("localhost", "root", "", "kp_if_itera");
+$query = "SELECT * FROM instansi";
+$result = mysqli_query($connect, $query);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -14,55 +19,63 @@
 <body>
 
     <div class="header">
-        <h1>Institut Teknologi Sumatera</h1>
+        <div class="sub">
+            <small>INSTITUT TEKNOLOGI</small>
+            <br>
+            <strong>SUMATERA</strong>
+        </div>
     </div>
 
     <div class="row">
-        <form class="col-6 col-s-12 form" action="../../authentification/login/code/login.php">
-            <h4>Website Resmi Kerja Praktik Teknik Informatika
-                Institut Teknologi Sumatera</h4>
-            <button class="btn btn-primary" type="submit">Login</a></button>
-        </form>
-
-        <div class="col-6 col-s-12 content">
-            <div class="col-9 col-12 content_satu">
-                <div class="col-9 col-s-12 foto_alur_kp">
-                    <img src="../img/alur_kp.png" alt="Foto Alur KP">
-                    <p>Info Alur Kerja Praktik</p>
-                </div>
+        <div class="col-12 col-s-12 abc">
+            <form class="col-6 col-s-12 form" action="../../authentification/login/code/login.php">
+                <strong>WEBSITE RESMI KERJA PRAKTIK TEKNIK INFORMATIKA</strong>
+                <br>
+                <strong>INSTITUT TEKNOLOGI SUMATERA</strong>
+                <br>
+                <br>
+                <button class="btn btn-success" type="submit">Masuk</a></button>
                 <a href="#">Unduh Surat Persetujuan</a>
+            </form>
+
+            <div class="col-6 col-s-12 content">
+                <div class="col-9 col-12 content_satu">
+                    <div class="col-9 col-s-12 foto_alur_kp">
+                        <img class="img-thumbnail" src="../img/alur_kp.png" alt="Foto Alur KP">
+                        <p>Info Alur Kerja Praktik</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="info_kp">
         <h4>Info Tempat Kerja Praktik</h4>
-        <table class=" table table-hover">
-            <thead>
-                <tr>
-                    <th>Instansi</th>
-                    <th>Direktur</th>
-                    <th>Email</th>
+        <br>
+        <div class="table-responsive">
+            <table class=" table table-hover">
+                <tr class="info">
+                    <th width="5%">No</th>
+                    <th width="25%">Nama Instansi</th>
+                    <th width="35%">Alamat</th>
+                    <th width="15%">No. Telepon</th>
+                    <th width="20%">Email</th>
                 </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>PT.Indodrink</td>
-                    <td>Doe</td>
-                    <td>indodrink@example.com</td>
-                </tr>
-                <tr>
-                    <td>Indroapril</td>
-                    <td>Moe</td>
-                    <td>indoapril@example.com</td>
-                </tr>
-                <tr>
-                    <td>Warungpedia</td>
-                    <td>Dooley</td>
-                    <td>warungpedia@example.com</td>
-                </tr>
-            </tbody>
-        </table>
+                <?php
+                while ($row = mysqli_fetch_array($result)) {
+                ?>
+                    <tr class="active">
+                        <td><?php echo $row["id"]; ?></td>
+                        <td><?php echo $row["nama"]; ?></td>
+                        <td><?php echo $row["alamat"]; ?></td>
+                        <td><?php echo $row["Telp"]; ?></td>
+                        <td><?php echo $row["email"]; ?></td>
+                    </tr>
+                <?php
+                }
+                ?>
+            </table>
+        </div>
     </div>
 
     <div class="footer">
